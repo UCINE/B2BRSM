@@ -1,6 +1,6 @@
 <a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl9r3rzu100060fl2eaaan66k/stats?cursusId=21&coalitionId=78" alt="UCINE's 42 stats" /></a>
 
-### This is a very important part of the project. You must pay attention to everything, it is very important not to copy and paste the file directly without knowing what each thing does. In the evaluation you must explain each command if the evaluator asks for it.
+### This is a very important part of the project. You must pay attention to everything.
 
 # Script
 
@@ -88,7 +88,7 @@ increase the number of sudo executions.
 
 ### 5.13 End result of the script
 
-⚠️ Pls Remember not to copy and paste if you don't know how each command works ⚠️
+## Pls Remember not to copy and paste if you don't know how each command works, In the evaluation you must explain each command if the evaluator asks for it.
 
 ```
 #!/bin/bash
@@ -124,7 +124,7 @@ wall "
 ```
 ## 6-Crontab ⏰
 
-🧠 <b>What is crontab? </b>It is a background process manager. The indicated processes will be executed at the time you specify in the crontab file.
+<b>crontab ? </b>It is a background process manager. The indicated processes will be executed at the time you specify in the crontab file.
 
 To have crontab correctly configured we must edit the crontab file with the following command ```sudo crontab-u root-e```.
 
