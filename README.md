@@ -88,7 +88,7 @@ increase the number of sudo executions.
 
 ### 5.13 End result of the script
 
-## Pls Remember not to copy and paste if you don't know how each command works, In the evaluation you must explain each command if the evaluator asks for it.
+ Pls Remember not to copy and paste if you don't know how each command works, In the evaluation you must explain each command if the evaluator asks for it.
 
 ```
 #!/bin/bash
