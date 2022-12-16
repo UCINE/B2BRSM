@@ -83,7 +83,7 @@ The entire command looks like this
 
 ### 5.12 Number of sudo usage
 
-In order to obtain the number of commands that are executed with sudo, we will use the jornalctl command, which is a tool that is responsible for collecting and managing system logs. Then we will put ```_COMM=sudo``` in order to filter the entries by specifying their path. In our we put ```_COMM``` since it refers to an executable script. Once we have filtered the search and only the sudo logs appear, we still have to filter a little more since when you start or close the root session it also appears in the log, so to finish filtering we will put a ```grep COMMAND``` and so only the command lines will appear. Finally we will put ```wc-l``` so that the lines are listed. The entire command is as follows: ```journalctl _COMM=sudo | grep COMMAND | wc-l)```. To verify that it works correctly we can run the command in the terminal, put a command that includes sudo and run the command again and it should
+In order to obtain the number of commands that are executed with sudo, we will just cat the sudo log file using ```cat /var/log/sudo/sudo.log | grep -a COMMAND | wc -l``` and we will put a ```grep COMMAND``` and so only the command lines will appear. and we will finally list the lines by ```wc-l```  To verify that it works correctly we can run the command in the terminal, put a command that includes sudo and run the command again and it should
 increase the number of sudo executions.
 
 ### 5.13 End result of the script
@@ -107,7 +107,7 @@ CON_TCP=$(ss -ta | grep ESTAB | wc -l)
 USR_LOG=$(users | wc -w)
 IP_ADD=$(hostname -I)
 MAC_ADD=$(ip link show | grep link/ether | awk '{print $2}')
-SUDO=$(journalctl -q _COMM=sudo | grep COMMAND | wc -l)
+SUDO=$(cat /var/log/sudo/sudo.log | grep -a COMMAND | wc -l)
 wall "
 	Architecture	: $ARCH
 	Physical CPUs	: $PCPU
