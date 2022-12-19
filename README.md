@@ -123,37 +123,5 @@ wall "
 	Sudo		: $SUDO cmd" 
 ```
 
-<b>crontab ? </b>It is a background process manager. The indicated processes will be executed at the time you specify in the crontab file.
 
-To have crontab correctly configured we must edit the crontab file with the following command ```sudo crontab-u root-e```.
-
-In the file we must add the following command so that the script is executed every 10 minutes ```*/10 * * * * sh /path of the script```.
-
-<img width="798" alt="Screen Shot 2022-08-03 at 4 40 18" src="https://user-images.githubusercontent.com/66915274/182512395-eaebabc2-5866-4ae3-966c-1a80818cde07.png">
-
-Operation of each crontab parameter:
-
-m ➤ Corresponds to the minute in which the script is going to be executed, the value ranges from 0 to 59.
-
-h ➤ The exact time, the 24-hour format is used, the values ​​range from 0 to 23, with 0 being 12:00 midnight.
-sun ➤ refers to the day of the month, for example you can specify 15 if you want to run every 15th.
-
-dow ➤ Means the day of the week, it can be numeric (0 to 7, where 0 and 7 are Sunday) or the first 3 letters of the day in English: mon, tue, wed, thu, fri, sat, sun.
-
-user ➤ Defines the user that is going to execute the command, it can be root, or another different user as long as it has permissions to execute the script.
-
-command ➤ Refers to the command or the absolute path of the script to execute.
-
-#
-<br>
-<br>
-<br>
-### ▪️ Differences between apt and aptitude
-
-Aptitude is an improved version of apt. APT is a lower level package manager and aptitude is a high level package manager. Another big difference is the functionality offered by both tools. Aptitude offers better functionality compared to apt-get. Both are capable of providing the necessary means to perform package management. However, if you are looking for a more feature-rich approach, it should be Aptitude.
-
-### ▪️ What is APPArmor
-
-It is a Linux kernel security module that allows the system administrator to restrict the capabilities of a program.
-
-### if you think it has been useful I would really appreciate starred 🌟 
+##### if you think it has been useful I would really appreciate starred 🌟 
